@@ -1,22 +1,30 @@
-import React from 'react'
-import logo from '../../src/assets/images/logo.png'
+import React from 'react';
+import logo from '../../src/assets/images/logo1.png';
+
 const Navbar = () => {
   return (
-    <header className='h-16 shadow-sm flex items-center'>
-        <nav className='flex  justify-between items-center w-9/12 mx-auto mt-5'>
-            <a href="/"><img src={logo} alt="logo" /></a>
-            {/* nav items */}
-            <div className='flex items-center space-x-5'>
-                <ul className='sm:flex items-center space-x-5 hidden'>
-                    <li><a href="/">How it works?</a></li>
-                    <li><a href="/">Features</a></li>
-                    <li><a href="/">About us</a></li>
-                </ul>
-                <button className='font-medium px-5 py-1 border border-primary rounded'>Login</button>
-            </div>
-        </nav>
-    </header>
-  )
-}
+    <header className="shadow-sm bg-white">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        {/* Logo */}
+        <a href="/" className="flex items-center">
+          <img src={logo} alt="logo" className="h-[70px] w-[70px] object-contain" />
+        </a>
 
-export default Navbar
+        {/* Navigation Links */}
+        <ul className="hidden sm:flex items-center space-x-10 text-lg font-medium text-gray-800">
+          <li>
+            <a href="/" className="hover:text-blue-600 transition duration-200">How it works?</a>
+          </li>
+          <li>
+            <a href="/" className="hover:text-blue-600 transition duration-200">Features</a>
+          </li>
+          <li>
+            <a href="/" className="hover:text-blue-600 transition duration-200">About us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
