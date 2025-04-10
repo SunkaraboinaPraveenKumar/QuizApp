@@ -99,7 +99,7 @@ const Quiz = () => {
     return (
         <section>
             <QuizHeader timer={timer} />
-            <div className='md:w-9/12 w-[90%] mx-auto mb-8 flex flex-col md:flex-row justify-between items-start'>
+            <div className='md:w-9/12 w-[90%] mx-auto mb-8 flex flex-col justify-between items-start'>
                 <div className='md:w-[70%] w-full'>
                     {questions.map((question, index) => (
                         <div key={question.id} className='m-3 py-3 px-4 shadow-sm border border-gray-200 rounded'>
@@ -140,7 +140,7 @@ const Quiz = () => {
                                 <h3 className={`text-xs ${status === 'Passed' ? "text-green-800" : "text-red-500"}`}>
                                     {status}
                                 </h3>
-                                <h1 className='text-3xl font-bold my-2'>{score * 10} <span className='text-slate-800'>/60</span></h1>
+                                <h1 className='text-3xl font-bold my-2'>{score} <span className='text-slate-800'>/20</span></h1>
                                 <p>Total Time: {formatTime(60 - timer)}<span>sec.</span></p>
                             </div>
                             <button onClick={restartQuiz} className='bg-primary px-6 py-2 text-white rounded mt-8 w-full'>Restart</button>
