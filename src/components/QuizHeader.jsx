@@ -10,7 +10,7 @@ const QuizHeader = ({timer}) => {
     <div className='shadow-sm my-5 py-2 sticky top-0 bg-white z-10'>
         <div className='w-9/12 mx-auto flex flex-col md:flex-row justify-between items-center'>
             <div className='text-xs'>
-            <p>Attention! You have 60 seconds to answer 6 questions.</p>
+            <p>Attention! You have 25 minutes to answer 20 questions.</p>
             <p>Please keep an eye on the timer and make sure to answer all qustions before timer runs out.</p>
             </div>
             {/* timer */}

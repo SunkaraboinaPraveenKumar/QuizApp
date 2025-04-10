@@ -1,74 +1,242 @@
 [
-    {
-      "id": 1,
-      "question": "What is the purpose of HTML in web development?",
-      "options": [
-        "Styling web pages",
-        "Defining data structures",
-        "Programming server-side logic",
-        "Creating the structure of web pages"
-      ],
-      "answer": "Creating the structure of web pages",
-      "description": "HTML (Hypertext Markup Language) is the standard markup language for creating the structure of web pages. It defines the elements and their arrangement, allowing browsers to interpret and display content on the internet."
-    },
-    {
-      "id": 2,
-      "question": "What does CSS stand for in web development?",
-      "options": [
-        "Computer Style Sheets",
-        "Creative Style System",
-        "Cascading Style Sheets",
-        "Colorful Style Scripts"
-      ],
-      "answer": "Cascading Style Sheets",
-      "description": "CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML. It controls the presentation, layout, and design of web pages, including aspects such as colors, fonts, and spacing."
-    },
-    {
-      "id": 3,
-      "question": "Which of the following is a popular front-end JavaScript framework?",
-      "options": [
-        "Express.js",
-        "Vue.js",
-        "Django",
-        "Flask"
-      ],
-      "answer": "Vue.js",
-      "description": "Vue.js is a progressive JavaScript framework used for building user interfaces. It is commonly used on the front end to create dynamic and reactive web applications. Vue.js is known for its simplicity and flexibility."
-    },
-    {
-      "id": 4,
-      "question": "What is the purpose of a web server in web development?",
-      "options": [
-        "Managing databases",
-        "Rendering user interfaces",
-        "Storing client-side scripts",
-        "Handling HTTP requests and responses"
-      ],
-      "answer": "Handling HTTP requests and responses",
-      "description": "A web server is a software or hardware component that handles HTTP (Hypertext Transfer Protocol) requests and responses. It serves web pages to clients, manages communication between clients and servers, and facilitates the processing of dynamic content."
-    },
-    {
-      "id": 5,
-      "question": "What is the role of AJAX in web development?",
-      "options": [
-        "Asynchronous JavaScript and XML",
-        "Advanced JSON and XML",
-        "Automated JavaScript and XHTML",
-        "Asynchronous JSON and XHTML"
-      ],
-      "answer": "Asynchronous JavaScript and XML",
-      "description": "AJAX (Asynchronous JavaScript and XML) is a set of web development techniques used to create asynchronous web applications. It allows data to be retrieved from a server asynchronously in the background, enabling dynamic and responsive user interfaces."
-    },
-    {
-      "id": 6,
-      "question": "What does the term 'responsive design' refer to in web development?",
-      "options": [
-        "Designing visually appealing websites",
-        "Creating mobile applications",
-        "Designing websites that adapt to different screen sizes",
-        "Implementing secure server configurations"
-      ],
-      "answer": "Designing websites that adapt to different screen sizes",
-      "description": "Responsive design in web development refers to the practice of creating websites that can adapt and provide an optimal viewing experience across various devices and screen sizes, including desktops, tablets, and mobile phones."
-    }
-  ]
+  {
+    "id": 1,
+    "question": "What is the output of the following C program?\n\n#include <stdio.h>\nint main() {\n    int a = 3, b = 4, c = 5;\n    int result = a + b * c - c / a;\n    printf(\"%d\", result);\n    return 0;\n}",
+    "options": [
+      "22",
+      "23",
+      "21",
+      "20"
+    ],
+    "answer": "22",
+    "description": "The expression is evaluated with multiplication and division having higher precedence. Compute b * c (4*5 = 20) and c / a (5/3 using integer division = 1), then result = 3 + 20 - 1 = 22."
+  },
+  {
+    "id": 2,
+    "question": "What is the output of the following Python code snippet?\n\nprint([x * x for x in range(3, 7) if x % 2 == 0])",
+    "options": [
+      "[9, 25]",
+      "[16, 36]",
+      "[9, 16, 25]",
+      "[4, 16, 36]"
+    ],
+    "answer": "[16, 36]",
+    "description": "The range(3, 7) generates numbers 3, 4, 5, 6. Filtering for even numbers gives 4 and 6; squaring these produces 16 and 36."
+  },
+  {
+    "id": 3,
+    "question": "What is the output of the following C code snippet regarding pointer increment?\n\n#include <stdio.h>\nint main() {\n    int x = 10;\n    int *p = &x;\n    printf(\"%d %d\", (*p)++, x);\n    return 0;\n}\n",
+    "options": [
+      "10 10",
+      "10 11",
+      "11 11",
+      "11 10"
+    ],
+    "answer": "10 11",
+    "description": "The post-increment operator (*p)++ returns the original value (10) before incrementing x. After the operation, x becomes 11, so the printed output is \"10 11\"."
+  },
+  {
+    "id": 4,
+    "question": "If two fair coins are tossed simultaneously, what is the probability of getting exactly one head?",
+    "options": [
+      "1/2",
+      "1/4",
+      "3/4",
+      "1/3"
+    ],
+    "answer": "1/2",
+    "description": "When two coins are tossed, the outcomes are: HH, HT, TH, TT. Exactly one head appears in HT and TH. Hence, probability = 2/4 = 1/2."
+  },
+  {
+    "id": 5,
+    "question": "A train travels for 4 hours at 60 km/h, stops for 30 minutes, then travels for another 2 hours at 80 km/h. What is the average speed for the entire journey (in km/h)?",
+    "options": [
+      "50 km/h",
+      "55 km/h",
+      "61.5 km/h",
+      "65 km/h"
+    ],
+    "answer": "61.5 km/h",
+    "description": "Distance for first leg: 4 × 60 = 240 km; second leg: 2 × 80 = 160 km; Total distance = 400 km. Total time = 4 + 0.5 + 2 = 6.5 hours. Average speed = 400 / 6.5 ≈ 61.5 km/h."
+  },
+  {
+    "id": 6,
+    "question": "If 15% of a number is 45, what is the number?",
+    "options": [
+      "200",
+      "250",
+      "300",
+      "350"
+    ],
+    "answer": "300",
+    "description": "Let the number be N. Then 0.15N = 45, so N = 45 / 0.15 = 300."
+  },
+  {
+    "id": 7,
+    "question": "What is the value of the expression: 2^3 + 3^2 ?",
+    "options": [
+      "15",
+      "17",
+      "19",
+      "21"
+    ],
+    "answer": "17",
+    "description": "2^3 is 8 and 3^2 is 9. Their sum is 8 + 9 = 17."
+  },
+  {
+    "id": 8,
+    "question": "What is the output of the following Python code involving dictionary comprehension?\n\nd = {i: i * i for i in range(1, 5)}\nprint(d[3])\n",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "16"
+    ],
+    "answer": "9",
+    "description": "The dictionary d is created as {1: 1, 2: 4, 3: 9, 4: 16}. Hence, d[3] is 9."
+  },
+  {
+    "id": 9,
+    "question": "A standard six-sided die is rolled once. What is the probability of obtaining a prime number on the die?",
+    "options": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "3/4"
+    ],
+    "answer": "1/2",
+    "description": "The prime numbers on a die are 2, 3, and 5. There are 3 prime outcomes out of 6 total outcomes, so the probability is 3/6 = 1/2."
+  },
+  {
+    "id": 10,
+    "question": "What error will the following Python code produce?\n\ndef foo():\n    return\nprint(foo() + 5)",
+    "options": [
+      "SyntaxError",
+      "TypeError",
+      "NameError",
+      "ValueError"
+    ],
+    "answer": "TypeError",
+    "description": "The function foo() returns None by default, and attempting to add None and an integer (5) results in a TypeError."
+  },
+  {
+    "id": 11,
+    "question": "What is the output of the following C program regarding function parameter passing?\n\n#include <stdio.h>\n\nvoid addOne(int x) {\n   x = x + 1;\n}\n\nint main() {\n    int a = 10;\n    addOne(a);\n    printf(\"%d\", a);\n    return 0;\n}\n",
+    "options": [
+      "11",
+      "10",
+      "Compilation Error",
+      "Undefined Behavior"
+    ],
+    "answer": "10",
+    "description": "In C, function arguments are passed by value. The function addOne modifies a copy of a, leaving the original variable unchanged."
+  },
+  {
+    "id": 12,
+    "question": "If a rectangle has a length of 12 and a width of 5, what is the length of its diagonal?",
+    "options": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answer": "13",
+    "description": "Using the Pythagorean theorem, the diagonal = √(12² + 5²) = √(144 + 25) = √169 = 13."
+  },
+  {
+    "id": 13,
+    "question": "Simplify the expression: (8 / 2) * (2 + 2)",
+    "options": [
+      "8",
+      "12",
+      "16",
+      "20"
+    ],
+    "answer": "16",
+    "description": "First, compute 8/2 = 4, and (2+2) = 4; then multiply: 4 * 4 = 16."
+  },
+  {
+    "id": 14,
+    "question": "What is the output of the following C code involving a loop with modulus?\n\n#include <stdio.h>\nint main(){\n    int i, count = 0;\n    for(i = 1; i <= 10; i++){\n        if(i % 3 == 0)\n            count++;\n    }\n    printf(\"%d\", count);\n    return 0;\n}\n",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3",
+    "description": "Within the range from 1 to 10, the numbers divisible by 3 are 3, 6, and 9. Thus, count equals 3."
+  },
+  {
+    "id": 15,
+    "question": "When two dice are rolled, what is the total number of possible outcomes?",
+    "options": [
+      "12",
+      "18",
+      "24",
+      "36"
+    ],
+    "answer": "36",
+    "description": "Each die has 6 faces. Therefore, the total number of outcomes is 6 × 6 = 36."
+  },
+  {
+    "id": 16,
+    "question": "What is the output of the following Python snippet using lambda and map?\n\nnums = [1, 2, 3]\nresult = list(map(lambda x: x + 2, nums))\nprint(result)",
+    "options": [
+      "[1, 2, 3]",
+      "[3, 4, 5]",
+      "[2, 3, 4]",
+      "[1, 4, 9]"
+    ],
+    "answer": "[3, 4, 5]",
+    "description": "The lambda function adds 2 to each element in the list. So, for nums = [1, 2, 3], the result becomes [3, 4, 5]."
+  },
+  {
+    "id": 17,
+    "question": "If a person travels 120 km in 2 hours and 30 minutes, what is their speed in km/h?",
+    "options": [
+      "45 km/h",
+      "48 km/h",
+      "50 km/h",
+      "52 km/h"
+    ],
+    "answer": "48 km/h",
+    "description": "Total time is 2.5 hours. Speed is calculated as distance/time = 120 km / 2.5 h = 48 km/h."
+  },
+  {
+    "id": 18,
+    "question": "What is the average of the prime numbers: 2, 3, 5, 7, and 11?",
+    "options": [
+      "5.2",
+      "5.6",
+      "6",
+      "6.2"
+    ],
+    "answer": "5.6",
+    "description": "The sum of the primes is 2+3+5+7+11 = 28. The average is 28 / 5 = 5.6."
+  },
+  {
+    "id": 19,
+    "question": "What will be the output of the following C program using a switch-case?\n\n#include <stdio.h>\nint main(){\n    int x = 2;\n    switch(x) {\n        case 1: printf(\"One\"); break;\n        case 2: printf(\"Two\");\n        case 3: printf(\"Three\"); break;\n        default: printf(\"Default\");\n    }\n    return 0;\n}\n",
+    "options": [
+      "Two",
+      "TwoThree",
+      "Three",
+      "TwoDefault"
+    ],
+    "answer": "TwoThree",
+    "description": "Since there is no break after case 2, execution continues into case 3. Thus, it prints \"Two\" followed by \"Three\"."
+  },
+  {
+    "id": 20,
+    "question": "When three coins are tossed, how many outcomes result in exactly two heads?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "description": "When tossing three coins, the number of outcomes with exactly two heads is given by the combination C(3,2) = 3."
+  }
+]

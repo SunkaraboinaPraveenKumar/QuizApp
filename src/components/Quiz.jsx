@@ -24,7 +24,7 @@ const Quiz = () => {
     const [showResult, setShowResult] = useState(false);
     const [score, setScore] = useState(0);
     const [loading, setLoading] = useState(false);
-    const [timer, setTimer] = useState(60);
+    const [timer, setTimer] = useState(60 * 25);
     const [timerIntervalId, setTimerIntervalId] = useState(null);
     const [status, setStatus] = useState('');
     const navigate = useNavigate();
@@ -92,7 +92,7 @@ const Quiz = () => {
         setScore(0);
         setShowResult(false);
         setLoading(false);
-        setTimer(60);
+        setTimer(60 * 25);
         startTimer(); // Restart the timer when the quiz is restarted
         navigate('/quiz');
     };
@@ -106,11 +106,23 @@ const Quiz = () => {
                         <div key={question.id} className='m-3 py-3 px-4 shadow-sm border border-gray-200 rounded'>
                             <p className='flex items-center rounded text-xs p-2 cursor-pointer'>
                                 <span className='h-8 w-8 bg-primary flex items-center justify-center text-green-800 mr-3'>{index + 1}</span>
-                                <span className='text-base block'>{question.question}</span>
+                                {/* Check if the question contains code */}
+                                {question.question.includes('#include') || question.question.includes('def') || question.question.includes('class')|| question.question.includes('print') ? (
+                                    <pre className='bg-gray-100 p-4 rounded text-sm overflow-auto'>
+                                        <code>{question.question}</code>
+                                    </pre>
+                                ) : (
+                                    <span className='text-base block'>{question.question}</span>
+                                )}
                             </p>
                             <div className='grid sm:grid-cols-2 grid-cols-1 gap-4 mt-5'>
                                 {question.options.map((option, index) => (
-                                    <div onClick={() => handleAnswerSelect(question.id, option)} key={index} className={`border p-2 border-gray-200 rounded text-sx cursor-pointer ${answers[question.id] === option ? 'bg-gray-300' : ''}`}>
+                                    <div
+                                        onClick={() => handleAnswerSelect(question.id, option)}
+                                        key={index}
+                                        className={`border p-2 border-gray-200 rounded text-sx cursor-pointer ${answers[question.id] === option ? 'bg-gray-300' : ''
+                                            }`}
+                                    >
                                         <p className='text-[10px] mb-1'>Option {index + 1}</p>
                                         <p>{option}</p>
                                     </div>
