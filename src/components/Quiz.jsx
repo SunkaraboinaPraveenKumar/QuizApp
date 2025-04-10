@@ -61,7 +61,6 @@ const Quiz = () => {
     };
 
     const handleSubmit = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
         setLoading(true);
         clearInterval(timerIntervalId);
 
@@ -100,7 +99,7 @@ const Quiz = () => {
     return (
         <section>
             <QuizHeader timer={timer} />
-            <div className='md:w-9/12 w-[90%] mx-auto mb-8 flex flex-col sm:flex-row justify-between items-start'>
+            <div className='md:w-9/12 w-[90%] mx-auto mb-8 flex flex-col md:flex-row justify-between items-start'>
                 <div className='md:w-[70%] w-full'>
                     {questions.map((question, index) => (
                         <div key={question.id} className='m-3 py-3 px-4 shadow-sm border border-gray-200 rounded'>
@@ -132,7 +131,7 @@ const Quiz = () => {
                     ))}
                     <button className='bg-primary px-6 py-2 text-white rounded' onClick={handleSubmit}>Submit Quiz</button>
                 </div>
-                <div className='md:w-[30%] w-full p-4'>
+                <div className='md:w-[30%] w-full p-4 flex-1'>
                     {showResult && (
                         <div>
                             <h3 className='text-2xl font-medium'>Your Score:</h3>
